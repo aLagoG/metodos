@@ -3,19 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TableRow>
+    <TableRow android:layout_width="match_parent">
 
-        <TextView android:text="Alto" />
+        <TextView
+            android:layout_weight="1"
+            android:text="Alto"
+            android:textAlignment="center" />
 
-        <TextView android:text="Ancho" />
+        <TextView
+            android:layout_weight="1"
+            android:text="Ancho"
+            android:textAlignment="center" />
 
     </TableRow>
 
-    <TableRow>
+    <TableRow android:layout_width="match_parent">
 
-        <EditText android:inputType="number" />
+        <EditText
+            android:layout_weight="1"
+            android:inputType="number" />
 
-        <EditText android:inputType="number" />
+        <EditText
+            android:layout_weight="1"
+            android:inputType="number" />
 
     </TableRow>
 

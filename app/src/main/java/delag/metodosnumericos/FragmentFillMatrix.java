@@ -1,6 +1,7 @@
 package delag.metodosnumericos;
 
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,8 @@ public class FragmentFillMatrix extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        DialogFragment dialog = new DialogMatrixSize();
+        dialog.show(getFragmentManager(),"Matrix Size Dialog");
         return inflater.inflate(R.layout.fragment_fill_matrix, container, false);
     }
 }

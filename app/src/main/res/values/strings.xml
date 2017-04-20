@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Métodos Numéricos</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_credits">Creditos</string>
+    <string name="nombre_proyecto">Proyecto de métodos numéricos</string>
+    <string name="nombreYo">Andres</string>
+    <string name="nombreNaka">Santiago</string>
+    <string name="Metodo1Yo">metodo1</string>
+    <string name="metodo2Yo">metodo2</string>
+    <string name="metodo3Yo">metodo3</string>
+    <string name="metodo1Naka">metodo1</string>
+    <string name="metodo2Naka">metodo2</string>
+    <string name="metodo3Naka">metodo3</string>
+    <string name="by1">By: Andrés de Lago Gómez</string>
+    <string name="by2">Santiago Nakakawa Bernal</string>
+</resources>

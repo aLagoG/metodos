@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="@string/nombreYo"
+            android:enabled="false"/>
+        <item
+            android:id="@+id/metodo1Yo"
+            android:title="@string/Metodo1Yo" />
+        <item
+            android:id="@+id/metodo2Yo"
+            android:title="@string/metodo2Yo" />
+        <item
+            android:id="@+id/metodo3Yo"
+            android:title="@string/metodo3Yo" />
+
+        <item
+            android:title="@string/nombreNaka"
+            android:enabled="false"/>
+        <item
+            android:id="@+id/metodo1Naka"
+            android:title="@string/metodo1Naka" />
+        <item
+            android:id="@+id/metodo2Naka"
+            android:title="@string/metodo2Naka" />
+        <item
+            android:id="@+id/metodo3Naka"
+            android:title="@string/metodo3Naka" />
+
+    </group>
+</menu>

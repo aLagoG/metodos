@@ -86,7 +86,7 @@ public class GaussJordan {
     }
 
     public double[][] doGaussStep() {
-        if(isGaussDone){
+        if (isGaussDone) {
             return null;
         }
         Pair<Integer, Integer> pivot = getNextPivot();
@@ -101,7 +101,7 @@ public class GaussJordan {
             return matrix;
         }
         for (int i = pivot.getFirst() + 1; i < height; i++) {
-            if (matrix[i][pivot.getSecond()]==0){
+            if (matrix[i][pivot.getSecond()] == 0) {
                 continue;
             }
             matrix[i] = rowSum(

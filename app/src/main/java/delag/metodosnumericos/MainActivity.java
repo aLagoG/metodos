@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -43,19 +44,24 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (getSupportFragmentManager().findFragmentById(R.id.frame_container) instanceof FragmentHome) {
+                super.onBackPressed();
+            } else {
+                ((NavigationView) findViewById(R.id.nav_view)).getMenu().performIdentifierAction(R.id.inicio, 0);
+            }
         }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         Fragment fragment = null;
 
-        if (id == R.id.metodo1Yo) {
+        if (id == R.id.inicio) {
+            fragment = new FragmentHome();
+        } else if (id == R.id.metodo1Yo) {
             fragment = new FragmentFillMatrix();
         } else if (id == R.id.metodo2Yo) {
 
@@ -70,10 +76,9 @@ public class MainActivity extends AppCompatActivity
         }
 
         if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.frame_container, fragment).addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, fragment).commit();
         }
+        ((NavigationView) findViewById(R.id.nav_view)).setCheckedItem(id);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

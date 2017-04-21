@@ -8,7 +8,7 @@
     <string name="nombre_proyecto">Proyecto de métodos numéricos</string>
     <string name="nombreYo">Andres</string>
     <string name="nombreNaka">Santiago</string>
-    <string name="Metodo1Yo">metodo1</string>
+    <string name="Metodo1Yo">Gauss-Jordan</string>
     <string name="metodo2Yo">metodo2</string>
     <string name="metodo3Yo">metodo3</string>
     <string name="metodo1Naka">metodo1</string>
@@ -16,4 +16,7 @@
     <string name="metodo3Naka">metodo3</string>
     <string name="by1">By: Andrés de Lago Gómez</string>
     <string name="by2">Santiago Nakakawa Bernal</string>
+    <string name="alto">Alto</string>
+    <string name="ancho">Ancho</string>
+    <string name="inicio">Inicio</string>
 </resources>

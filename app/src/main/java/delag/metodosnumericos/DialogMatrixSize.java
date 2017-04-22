@@ -22,6 +22,7 @@ public class DialogMatrixSize extends DialogFragment {
         mListener = (DialogListener) getActivity().getSupportFragmentManager().findFragmentById(R.id.frame_container);
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
+
         builder.setView(inflater.inflate(R.layout.dialog_matrix_size, null))
                 .setTitle("Dimensiones de la matriz")
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -48,14 +49,6 @@ public class DialogMatrixSize extends DialogFragment {
                 dialog.dismiss();
             }
         });
-
-//        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                DialogMatrixSize.this.mListener.onDialogNegativeClick(DialogMatrixSize.this);
-//                dialog.dismiss();
-//            }
-//        });
         return dialog;
     }
 

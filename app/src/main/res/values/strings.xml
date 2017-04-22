@@ -8,7 +8,7 @@
     <string name="nombre_proyecto">Proyecto de métodos numéricos</string>
     <string name="nombreYo">Andres</string>
     <string name="nombreNaka">Santiago</string>
-    <string name="Metodo1Yo">Gauss-Jordan</string>
+    <string name="Metodo1Yo">Gauss</string>
     <string name="metodo2Yo">metodo2</string>
     <string name="metodo3Yo">metodo3</string>
     <string name="metodo1Naka">metodo1</string>
@@ -19,4 +19,6 @@
     <string name="alto">Alto</string>
     <string name="ancho">Ancho</string>
     <string name="inicio">Inicio</string>
+    <string name="starting_height">2</string>
+    <string name="starting_width">2</string>
 </resources>

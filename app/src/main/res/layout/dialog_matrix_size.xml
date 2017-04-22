@@ -24,12 +24,14 @@
         <EditText
             android:id="@+id/alto_matriz"
             android:layout_weight="1"
-            android:inputType="number" />
+            android:inputType="number"
+            android:text="@string/starting_height"/>
 
         <EditText
             android:id="@+id/ancho_matriz"
             android:layout_weight="1"
-            android:inputType="number" />
+            android:inputType="number"
+            android:text="@string/starting_width"/>
 
     </TableRow>
 

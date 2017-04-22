@@ -11,6 +11,8 @@ public class GaussJordan {
     int length;
     boolean hasToSwitchRows;
     boolean isGaussDone;
+    double THATS_ZERO = 0.00001;
+    int numberOfSteps = 0;
 
     public GaussJordan(@NonNull double[][] matrix) {
         this.matrix = matrix;
@@ -45,7 +47,7 @@ public class GaussJordan {
         boolean done = false;
         for (j = col; j < length; j++) {
             for (i = row; i < height; i++) {
-                if (matrix[i][j] != 0) {
+                if (Math.abs(matrix[i][j]) > THATS_ZERO) {
                     done = true;
                     break;
                 }
@@ -90,18 +92,19 @@ public class GaussJordan {
             return null;
         }
         Pair<Integer, Integer> pivot = getNextPivot();
-        if (pivot == null) {
+        if (pivot == null || pivot.getSecond()==height-1) {
             row = 1;
             col = 0;
             isGaussDone = true;
             return null;
         }
+        numberOfSteps++;
         if (pivot.getFirst() != row) {
             switchRows(pivot.getFirst());
             return matrix;
         }
         for (int i = pivot.getFirst() + 1; i < height; i++) {
-            if (matrix[i][pivot.getSecond()] == 0) {
+            if (Math.abs(matrix[i][pivot.getSecond()]) < THATS_ZERO) {
                 continue;
             }
             matrix[i] = rowSum(

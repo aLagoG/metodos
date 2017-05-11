@@ -92,7 +92,7 @@ public class GaussJordan {
             return null;
         }
         Pair<Integer, Integer> pivot = getNextPivot();
-        if (pivot == null || pivot.getSecond()==height-1) {
+        if (pivot == null || pivot.getSecond() == height - 1) {
             row = 1;
             col = 0;
             isGaussDone = true;
@@ -115,6 +115,28 @@ public class GaussJordan {
         }
         row++;
         col++;
+        return matrix;
+    }
+
+    public double[][] doGaussJordan() {
+        for (int k = 0; k < height; k++) {
+            Pair<Integer, Integer> pivot = getNextPivot();
+            if (pivot.getFirst() != row) {
+                switchRows(pivot.getFirst());
+            }
+            matrix[k] = rowMultiply(matrix[k], 1 / matrix[k][k]);
+            for (int i = 0; i < height; i++) {
+                if (i == k || Math.abs(matrix[i][pivot.getSecond()]) < THATS_ZERO) {
+                    continue;
+                }
+                matrix[i] = rowSum(
+                        rowMultiply(matrix[pivot.getFirst()],
+                                (matrix[i][pivot.getSecond()] * matrix[pivot.getFirst()][pivot.getSecond()] < 0 ? 1 : -1) *
+                                        Math.abs(matrix[i][pivot.getSecond()])), matrix[i]);
+            }
+            row++;
+            col++;
+        }
         return matrix;
     }
 }

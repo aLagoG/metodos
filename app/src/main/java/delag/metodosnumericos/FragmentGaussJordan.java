@@ -12,7 +12,9 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-public class FragmentGaussJordan extends Fragment {
+import java.io.Serializable;
+
+public class FragmentGaussJordan extends Fragment implements Serializable {
 
     GaussJordan gj;
 

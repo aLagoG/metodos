@@ -9,16 +9,18 @@
     <string name="nombreYo">Andres</string>
     <string name="nombreNaka">Santiago</string>
     <string name="Metodo1Yo">Gauss</string>
-    <string name="metodo2Yo">metodo2</string>
-    <string name="metodo3Yo">metodo3</string>
+    <string name="metodo2Yo">Gauss-Seidel</string>
+    <string name="metodo3Yo">Polinomios de Interpolación</string>
     <string name="metodo1Naka">metodo1</string>
     <string name="metodo2Naka">metodo2</string>
     <string name="metodo3Naka">metodo3</string>
-    <string name="by1">By: Andrés de Lago Gómez</string>
+    <string name="by1">Andrés de Lago Gómez</string>
     <string name="by2">Santiago Nakakawa Bernal</string>
     <string name="alto">Alto</string>
     <string name="ancho">Ancho</string>
     <string name="inicio">Inicio</string>
     <string name="starting_height">2</string>
     <string name="starting_width">2</string>
+    <string name="by">By:</string>
+    <string name="resultado">Resultado:</string>
 </resources>

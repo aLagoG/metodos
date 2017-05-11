@@ -62,17 +62,29 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.inicio) {
             fragment = new FragmentHome();
         } else if (id == R.id.metodo1Yo) {
-            fragment = new FragmentFillMatrix();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("Next Fragment", new FragmentGaussJordan());
+            bundle.putSerializable("Strings", new String[]{"Este método recive una matriz y regresa una matriz equivalente de forma triangular superior",
+                    "Puede recibir cualquier matriz que tenga dimensiones mayores o iguales a 2x2",
+                    "Es importante tener en cuenta que para matrices muy grandes este proceso puede tardar mucho tiempo"});
+            fragment = new FragmentInstructions();
+            fragment.setArguments(bundle);
         } else if (id == R.id.metodo2Yo) {
-
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("Next Fragment", new FragmentGaussSeidel());
+            bundle.putSerializable("Strings", new String[]{"Este metodo recive la representación matricial de un sistema de ecuaciones lineales y" +
+                    " regresa una aproximación a la solución del mismo",
+                    "Es importante tener en cuenta que para matrices muy grandes este proceso puede tardar mucho tiempo"});
+            fragment = new FragmentInstructions();
+            fragment.setArguments(bundle);
         } else if (id == R.id.metodo3Yo) {
 
         } else if (id == R.id.metodo1Naka) {
-
+            //TODO aqui pones fragment = new "La clase que sea tu fragment" para el metodo 1
         } else if (id == R.id.metodo2Naka) {
-
+            //TODO aqui pones fragment = new "La clase que sea tu fragment" para el metodo 2
         } else if (id == R.id.metodo3Naka) {
-
+            //TODO aqui pones fragment = new "La clase que sea tu fragment" para el metodo 3
         }
 
         if (fragment != null) {

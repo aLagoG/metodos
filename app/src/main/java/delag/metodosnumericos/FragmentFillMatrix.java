@@ -33,21 +33,25 @@ public class FragmentFillMatrix extends Fragment implements DialogMatrixSize.Dia
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fill_matrix, container, false);
-        FloatingActionButton btn = (FloatingActionButton)  view.findViewById(R.id.ok_button);
+        FloatingActionButton btn = (FloatingActionButton) view.findViewById(R.id.ok_button);
+        if(getArguments().get("Next Fragment") instanceof FragmentGaussSeidel){
+
+        }
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 matriz = new double[altoMatriz][anchoMatriz];
-                for(int i=0;i<altoMatriz;i++){
-                    for(int j=0;j<anchoMatriz;j++){
+                for (int i = 0; i < altoMatriz; i++) {
+                    for (int j = 0; j < anchoMatriz; j++) {
                         matriz[i][j] = Double.parseDouble(textosMatriz[i][j].getText().toString());
                     }
                 }
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("Matrix",matriz);
-                FragmentGaussJordan fragment = new FragmentGaussJordan();
+                bundle.putSerializable("Matrix", matriz);
+//                FragmentGaussJordan fragment = new FragmentGaussJordan();
+                Fragment fragment = (Fragment) FragmentFillMatrix.this.getArguments().get("Next Fragment");
                 fragment.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container,fragment).commit();
+                        .replace(R.id.frame_container, fragment).commit();
             }
         });
         return view;

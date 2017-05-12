@@ -78,7 +78,11 @@ public class MainActivity extends AppCompatActivity
             fragment = new FragmentInstructions();
             fragment.setArguments(bundle);
         } else if (id == R.id.metodo3Yo) {
-
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("Next Fragment", new FragmentInterpolationPolynomials());
+            bundle.putSerializable("Strings", new String[]{"Este metodo recive cierta cantidad de puntos y devuelve un polinomio que pasa por todos ellos"});
+            fragment = new FragmentInstructions();
+            fragment.setArguments(bundle);
         } else if (id == R.id.metodo1Naka) {
             //TODO aqui pones fragment = new "La clase que sea tu fragment" para el metodo 1
         } else if (id == R.id.metodo2Naka) {

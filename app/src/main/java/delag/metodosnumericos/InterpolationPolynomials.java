@@ -1,5 +1,8 @@
 package delag.metodosnumericos;
 
+import java.text.DecimalFormat;
+import java.util.Locale;
+
 public class InterpolationPolynomials {
 
     public static String getInterpolationPolinomial(double[] xs, double[] ys) {
@@ -20,14 +23,20 @@ public class InterpolationPolynomials {
         }
         matrix = MatrixMultiply(matrix, mul);
         String res = "f(x) = ";
+        DecimalFormat df = new DecimalFormat();
+        df.setMaximumFractionDigits(5);
+        df.setMinimumFractionDigits(0);
+        df.setGroupingUsed(false);
         if (Math.abs(matrix[0][0]) > 0.0001) {
-            res += matrix[0][0];
+            res += df.format(matrix[0][0]);
         }
         for (int i = 1; i < matrix.length; i++) {
             if (Math.abs(matrix[i][0]) < 0.0001) {
                 continue;
             }
-            res += (res.length() > 7 ? " " + (matrix[i][0] > 0 ? "+ " : "") : "") + matrix[i][0] + "x" + (i > 1 ? "^" + i : "");
+            res += (res.length() > 7 ? " " + (matrix[i][0] > 0 ? "+ " : "") : "") +
+                    (df.format(matrix[i][0]).equals("1") ? "" : df.format(matrix[i][0])) +
+                    "x" + (i > 1 ? "^" + i : "");
         }
         return res;
     }

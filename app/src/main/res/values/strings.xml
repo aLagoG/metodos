@@ -23,4 +23,7 @@
     <string name="starting_width">2</string>
     <string name="by">By:</string>
     <string name="resultado">Resultado:</string>
+    <string name="cantidad_de_puntos">Cantidad de puntos:</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="obtener_resultado">Obtener Resultado</string>
 </resources>

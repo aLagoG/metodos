@@ -23,7 +23,7 @@ public class FragmentInstructions extends Fragment {
         FloatingActionButton btn = (FloatingActionButton) view.findViewById(R.id.instructions_ok_button);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (next instanceof FragmentGaussSeidel || next instanceof FragmentGaussJordan) {
+                if (next instanceof FragmentGaussSeidel || next instanceof FragmentGaussJordan || next instanceof FragmentCramer) {
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("Next Fragment", (Serializable) next);
                     next = new FragmentFillMatrix();

@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.itesm.quesodesuaperro.Biseccion">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Funcion"
+        android:hint="Ingrese la función"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp" />
+
+
+    <EditText
+        android:id="@+id/PuntoInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="Punto Inicial"
+        android:layout_below="@+id/Funcion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/PuntoFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_alignBaseline="@+id/PuntoInicial"
+        android:layout_alignBottom="@+id/PuntoInicial"
+        android:hint="Punto Final"
+        android:layout_toEndOf="@+id/PuntoInicial"
+        android:layout_toRightOf="@+id/PuntoInicial"
+        />
+
+    <EditText
+        android:id="@+id/Error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Error en porcentaje"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/PuntoInicial"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/Aceptar"
+        android:layout_toStartOf="@+id/Aceptar" />
+
+    <Button
+        android:id="@+id/Aceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aceptar"
+        android:layout_below="@+id/PuntoInicial"
+        android:layout_alignRight="@+id/editText8"
+        android:layout_alignEnd="@+id/editText8"
+        android:layout_marginRight="82dp"
+        android:layout_marginEnd="82dp" />
+
+    <TextView
+        android:id="@+id/Resultados"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:lines="20"
+        android:scrollHorizontally="false"
+        android:scrollbars="vertical"
+        android:textSize="20sp"
+        android:layout_below="@+id/Aceptar" />
+
+    <TextView
+    android:id="@+id/editText8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:text=""
+    android:textSize="30sp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+
+</RelativeLayout>

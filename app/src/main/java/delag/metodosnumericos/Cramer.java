@@ -14,7 +14,6 @@ public class Cramer {
     double[] B;
     final int height;
     final int length;
-    private final int maxCount = 1000;
 
     public Cramer(@NonNull double[][] A, double[] res) {
         this.A = A;
@@ -40,11 +39,9 @@ public class Cramer {
                 M[i][j]=A[i][j];
             }
         }
-
         for (int i=0;i<height;i++){
             B[i]=A[i][length-1];
         }
-
         double temp[][] = new double[height][height];
         double res[] = new double[height];
         for(int i=0;i<height;i++)
@@ -57,27 +54,20 @@ public class Cramer {
                         temp[j][k] = M[j][k];
                 }}
             res[i]=determinant(temp,height)/determinant(M,height);
-
-
         }
         return res;
     }
 
     private double determinant(double A[][],int N)
     {
-
-        double det=0;
         double x;
-
 
         if(N == 1)
             x = A[0][0];
-
         else if (N == 2)
         {
             x = A[0][0]*A[1][1] - A[1][0]*A[0][1];
         }
-
         else
         {
             x=0;
@@ -100,9 +90,6 @@ public class Cramer {
                 x += Math.pow(-1.0,1.0+j1+1.0)* A[0][j1] * determinant(m,N-1);
             }
         }
-
         return x;
-
     }
-
 }

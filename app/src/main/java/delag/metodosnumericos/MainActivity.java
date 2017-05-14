@@ -93,7 +93,11 @@ public class MainActivity extends AppCompatActivity
             fragment = new FragmentInstructions();
             fragment.setArguments(bundle);
         } else if (id == R.id.metodo2Naka) {
-            //TODO aqui pones fragment = new "La clase que sea tu fragment" para el metodo 2
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("Next Fragment", new Biseccion());
+            bundle.putSerializable("Strings", new String[]{""});
+            fragment = new FragmentInstructions();
+            fragment.setArguments(bundle);
         } else if (id == R.id.metodo3Naka) {
             //TODO aqui pones fragment = new "La clase que sea tu fragment" para el metodo 3
         }

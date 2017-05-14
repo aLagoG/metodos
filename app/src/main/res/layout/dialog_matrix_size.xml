@@ -20,19 +20,21 @@
 
     </TableRow>
 
-    <TableRow android:layout_width="match_parent">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <EditText
             android:id="@+id/alto_matriz"
             android:layout_weight="1"
             android:inputType="number"
-            android:text="@string/starting_height"/>
+            android:text="@string/starting_height" />
 
         <EditText
             android:id="@+id/ancho_matriz"
             android:layout_weight="1"
             android:inputType="number"
-            android:text="@string/starting_width"/>
+            android:text="@string/starting_width" />
 
     </TableRow>
 

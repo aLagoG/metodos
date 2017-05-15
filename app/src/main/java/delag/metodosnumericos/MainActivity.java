@@ -97,11 +97,18 @@ public class MainActivity extends AppCompatActivity
             bundle.putSerializable("Next Fragment", new Biseccion());
             bundle.putSerializable("Strings", new String[]{"Este método calcula dados dos puntos distintos y una función inicial en qué punto exacto se encuentra la raíz realizando"+
                     "una aproximación a la mitad de ambos puntos hasta un porcentaje de error determinado.",
+                    "Tomar en cuenta que hay que poner un * entre letras y coeficientes."
             });
             fragment = new FragmentInstructions();
             fragment.setArguments(bundle);
         } else if (id == R.id.metodo3Naka) {
-            //TODO aqui pones fragment = new "La clase que sea tu fragment" para el metodo 3
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("Next Fragment", new Bairstow());
+            bundle.putSerializable("Strings", new String[]{"Este método calcula las raíces de una ecuacuión a través de la técnica de la doble división sintética.",
+                    "Recordar poner una coma entre los coeficientes."
+            });
+            fragment = new FragmentInstructions();
+            fragment.setArguments(bundle);
         }
 
         if (fragment != null) {

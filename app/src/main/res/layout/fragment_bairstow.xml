@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/fragment_bairstow"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:weightSum="1">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:text="Introduce los coeficientes del polinomio"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20sp"
-        android:layout_marginTop="20sp"
-        android:text="@string/resultado"
-        android:textSize="20sp" />
+        android:id="@+id/instrucciones"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title" />
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Coeficientes"
+        android:ems="10"
+        android:id="@+id/coeficientes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-        <LinearLayout
-            android:id="@+id/bairstow_results"
-            android:layout_width="match_parent"
+    <Button
+        android:text="Calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calcular" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Resultados"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/resTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultados"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
 </LinearLayout>

@@ -21,8 +21,6 @@ import java.util.ArrayList;
 
 public class Biseccion extends Fragment implements View.OnClickListener,Serializable{
 
-    //TODO Problemas con los exponentes en la evaluación
-
     private Button upButton;
     private EditText funcion;
     private EditText puntoInicial;

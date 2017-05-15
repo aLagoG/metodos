@@ -95,7 +95,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.metodo2Naka) {
             Bundle bundle = new Bundle();
             bundle.putSerializable("Next Fragment", new Biseccion());
-            bundle.putSerializable("Strings", new String[]{""});
+            bundle.putSerializable("Strings", new String[]{"Este método calcula dados dos puntos distintos y una función inicial en qué punto exacto se encuentra la raíz realizando"+
+                    "una aproximación a la mitad de ambos puntos hasta un porcentaje de error determinado.",
+            });
             fragment = new FragmentInstructions();
             fragment.setArguments(bundle);
         } else if (id == R.id.metodo3Naka) {

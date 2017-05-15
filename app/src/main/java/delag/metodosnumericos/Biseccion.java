@@ -21,6 +21,8 @@ import java.util.ArrayList;
 
 public class Biseccion extends Fragment implements View.OnClickListener,Serializable{
 
+    //TODO Problemas con los exponentes en la evaluación
+
     private Button upButton;
     private EditText funcion;
     private EditText puntoInicial;
@@ -181,7 +183,8 @@ public class Biseccion extends Fragment implements View.OnClickListener,Serializ
 
     @Override
     public void onClick(View view) {
-        if(view.getId()==R.id.Aceptar) {
+        switch (view.getId()) {
+            case R.id.Aceptar:
                 if(validar(funcion.getText().toString())) {
                     res = biseccionCompleta(funcion.getText().toString(), Double.parseDouble(puntoInicial.getText().toString()),
                             Double.parseDouble(puntoFinal.getText().toString()), Double.parseDouble(error.getText().toString()));
@@ -190,6 +193,7 @@ public class Biseccion extends Fragment implements View.OnClickListener,Serializ
                     resultados.setText(res);
                     resultados.setMovementMethod(new ScrollingMovementMethod());
                 }
+                break;
         }
     }
 
@@ -205,5 +209,4 @@ public class Biseccion extends Fragment implements View.OnClickListener,Serializ
             toast.show();
             return false;
         }
-    }
-}
+    }}

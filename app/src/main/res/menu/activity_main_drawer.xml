@@ -26,10 +26,10 @@
             android:title="@string/nombreNaka" />
         <item
             android:id="@+id/metodo1Naka"
-            android:title="@string/metodo1Naka" />
+            android:title="Cramer" />
         <item
             android:id="@+id/metodo2Naka"
-            android:title="@string/metodo2Naka" />
+            android:title="Bisección" />
         <item
             android:id="@+id/metodo3Naka"
             android:title="@string/metodo3Naka" />

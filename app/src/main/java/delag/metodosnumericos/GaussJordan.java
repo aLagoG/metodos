@@ -110,7 +110,7 @@ public class GaussJordan {
             matrix[i] = rowSum(
                     rowMultiply(matrix[pivot.getFirst()],
                             (matrix[i][pivot.getSecond()] * matrix[pivot.getFirst()][pivot.getSecond()] < 0 ? 1 : -1) *
-                                    matrix[i][pivot.getSecond()]),
+                                    Math.abs(matrix[i][pivot.getSecond()])),
                     rowMultiply(matrix[i], matrix[pivot.getFirst()][pivot.getSecond()]));
         }
         row++;

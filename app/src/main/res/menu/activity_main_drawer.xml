@@ -32,7 +32,7 @@
             android:title="Bisección" />
         <item
             android:id="@+id/metodo3Naka"
-            android:title="@string/metodo3Naka" />
+            android:title="Bairstrow" />
 
     </group>
 </menu>

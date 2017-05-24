@@ -11,9 +11,9 @@
     <string name="Metodo1Yo">Gauss</string>
     <string name="metodo2Yo">Gauss-Seidel</string>
     <string name="metodo3Yo">Polinomios de Interpolación</string>
-    <string name="metodo1Naka">metodo1</string>
-    <string name="metodo2Naka">metodo2</string>
-    <string name="metodo3Naka">metodo3</string>
+    <string name="metodo1Naka">Cramer</string>
+    <string name="metodo2Naka">Bisección</string>
+    <string name="metodo3Naka">Bairstow</string>
     <string name="by1">Andrés de Lago Gómez</string>
     <string name="by2">Santiago Nakakawa Bernal</string>
     <string name="alto">Alto</string>

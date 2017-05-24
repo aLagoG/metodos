@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="1">
 
     <TextView
-        android:text="Introduce los coeficientes del polinomio"
+        android:id="@+id/instrucciones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/instrucciones"
+        android:text="Introduce los coeficientes del polinomio"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title" />
 
     <EditText
+        android:id="@+id/coeficientes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:ems="10"
         android:inputType="textPersonName"
         android:text="Coeficientes"
-        android:ems="10"
-        android:id="@+id/coeficientes"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
     <Button
-        android:text="Calcular"
+        android:id="@+id/calcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/calcular" />
+        android:text="Calcular" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:text="Resultados"
+            android:id="@+id/resTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/resTitle" />
+            android:layout_alignParentTop="true"
+            android:text="Resultados" />
 
         <TextView
+            android:id="@+id/resultados"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/resultados"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
     </RelativeLayout>
 
 </LinearLayout>

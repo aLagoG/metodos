@@ -26,13 +26,13 @@
             android:title="@string/nombreNaka" />
         <item
             android:id="@+id/metodo1Naka"
-            android:title="Cramer" />
+            android:title="@string/metodo1Naka" />
         <item
             android:id="@+id/metodo2Naka"
-            android:title="Bisección" />
+            android:title="@string/metodo2Naka" />
         <item
             android:id="@+id/metodo3Naka"
-            android:title="Bairstrow" />
+            android:title="@string/metodo3Naka" />
 
     </group>
 </menu>
